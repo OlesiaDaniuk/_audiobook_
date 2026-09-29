@@ -1,0 +1,220 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Для Варі. Про Варю</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			background: black;
+			overflow: hidden;
+		}
+		h1 {
+			position: absolute;
+			left: 5%;
+			color: white;
+			font-size: 4vw;
+			width: 30%;
+		}
+		.page img {
+			width: 98%;
+			height: 98%;
+			border: 10px solid black;
+		}
+		audio {
+			width: 30%;
+			position: fixed;
+			bottom: 0;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<h1>Для Варі<br>про Варю</h1>
+<div id="book">
+	<div class="page"><img src="Обкладинка.png" alt="Cover"></div>
+	<div class="page"><img src="1982.jpg"></div>
+	<div class="page"><img src="19822.jpg"></div>
+	<div class="page"><img src="19823.jpg"></div>
+	<div class="page"><img src="19824.jpg"></div>
+	<div class="page"><img src="2004.jpg"></div>
+	<div class="page"><img src="20042.jpg"></div>
+	<div class="page"><img src="20043.jpg"></div>
+	<div class="page"><img src="20044.jpg"></div>
+	<div class="page"><img src="2011.jpg"></div>
+	<div class="page"><img src="20112.jpg"></div>
+	<div class="page"><img src="2012.jpg"></div>
+	<div class="page"><img src="20122.jfif"></div>
+	<div class="page"><img src="20133.jpg"></div>
+	<div class="page"><img src="20134.jpg"></div>
+	<div class="page"><img src="2013.jpg"></div>
+	<div class="page"><img src="20132.jpg"></div>
+	<div class="page"><img src="20143.jpg"></div>
+	<div class="page"><img src="20144.jpg"></div>
+	<div class="page"><img src="2014.jpg"></div>
+	<div class="page"><img src="20142.jpg"></div>
+	<div class="page"><img src="2015.jpg"></div>
+	<div class="page"><img src="20152.jpg"></div>
+	<div class="page"><img src="2016.jpg"></div>
+	<div class="page"><img src="20162.jpg"></div>
+	<div class="page"><img src="2017.jpg"></div>
+	<div class="page"><img src="20172.jpg"></div>
+	<div class="page"><img src="2018.jpg"></div>
+	<div class="page"><img src="20182.jpg"></div>
+	<div class="page"><img src="20193.jpg"></div>
+	<div class="page"><img src="20194.jfif"></div>
+	<div class="page"><img src="2019.jpg"></div>
+	<div class="page"><img src="20192.jpg"></div>
+	<div class="page"><img src="20195.jpg"></div>
+	<div class="page"><img src="20196.jpg"></div>
+	<div class="page"><img src="2020.jpg"></div>
+	<div class="page"><img src="20202.jpg"></div>
+	<div class="page"><img src="2021.jpg"></div>
+	<div class="page"><img src="20212.jpg"></div>
+	<div class="page"><img src="2022.jpg"></div>
+	<div class="page"><img src="20222.jpg"></div>
+	<div class="page"><img src="2023.jpg"></div>
+	<div class="page"><img src="20232.jfif"></div>
+	<div class="page"><img src="2024.jpg"></div>
+	<div class="page"><img src="20242.jfif"></div>
+	<div class="page"><img src="2025.jpg"></div>
+	<div class="page"><img src="20252.png"></div>
+	<div class="page"><img src="2026.jpg"></div>
+	<div class="page"><img src="20262.jpg"></div>
+</div>
+<audio id="audioPlayer" controls>
+	<source id="audioSource">
+</audio>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="turn.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#book").turn({
+			width: "100%",
+			height: "95%",
+			autoCenter: true
+		});
+		$("#book").bind("turning", function(event, page, view){
+			const audioPlayer = document.getElementById("audioPlayer");
+			audioPlayer.style.display = "block";
+			const audioSource = document.getElementById("audioSource");
+			switch(page){
+			case 2:
+			case 3:
+				audioSource.src = "1.mp3";
+				break;
+			case 4:
+			case 5:
+				audioSource.src = "2.mp3";
+				break;
+			case 6:
+			case 7:
+				audioSource.src = "3.mp3";
+				break;
+			case 8:
+			case 9:
+				audioSource.src = "4.mp3";
+				break;
+			case 10:
+			case 11:
+				audioSource.src = "5.mp3";
+				break;
+			case 12:
+			case 12:
+				audioSource.src = "6.mp3";
+				break;
+			case 14:
+			case 15:
+				audioSource.src = "7.mp3";
+				break;
+			case 16:
+			case 17:
+				audioSource.src = "8.mp3";
+				break;
+			case 18:
+			case 19:
+				audioSource.src = "9.mp3";
+				break;
+			case 20:
+			case 21:
+				audioSource.src = "10.mp3";
+				break;
+			case 22:
+			case 23:
+				audioSource.src = "11.mp3";
+				break;
+			case 24:
+			case 25:
+				audioSource.src = "12.mp3";
+				break;
+			case 26:
+			case 27:
+				audioSource.src = "13.mp3";
+				break;
+			case 28:
+			case 29:
+				audioSource.src = "14.mp3";
+				break;
+			case 30:
+			case 31:
+				audioSource.src = "15.mp3";
+				break;
+			case 32:
+			case 33:
+				audioSource.src = "16.mp3";
+				break;
+			case 34:
+			case 35:
+				audioSource.src = "17.mp3";
+				break;
+			case 36:
+			case 37:
+				audioSource.src = "18.mp3";
+				break;
+			case 38:
+			case 39:
+				audioSource.src = "19.mp3";
+				break;
+			case 40:
+			case 41:
+				audioSource.src = "20.mp3";
+				break;
+			case 42:
+			case 43:
+				audioSource.src = "21.mp3";
+				break;
+			case 44:
+			case 45:
+				audioSource.src = "22.mp3";
+				break;
+			case 46:
+			case 47:
+				audioSource.src = "23.mp3";
+				break;
+			case 48:
+			case 49:
+				audioSource.src = "24.mp3";
+				break;
+			default:
+				audioSource.src = "";
+				audioPlayer.style.display = "none";
+				break;
+			}
+			if (audioSource.src){
+				audioPlayer.load();
+				audioPlayer.play();
+			}else {
+				audioPlayer.pause();
+			}
+		});
+	});
+</script>
+</body>
+</html>
